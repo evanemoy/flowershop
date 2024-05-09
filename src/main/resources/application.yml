@@ -6,10 +6,10 @@ spring:
     name: flowershop
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: "jdbc:postgresql://dpg-couc9ti1hbls7383i9k0-a:5432/flowershop_db"
+    url: "jdbc:postgresql://dpg-coucq2v79t8c739eof8g-a:5432/db_084y"
     hikari:
-      username: eva
-      password: jxNqvVqeS8FdPNRGblLU7oqc4hHseoff
+      username: user
+      password: c9yGFLYgfL0giTuNWgbtWq2rJHGbhxXL
   mvc:
     hiddenmethod:
       filter:
