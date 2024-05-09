@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin</title>
+    <link href="/static/css/default.css" rel="stylesheet">
+    <link href="/static/css/admin.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="/header :: header"></div>
+    <div class="adminRoutes">
+        <a th:href="@{/admin/flowers}">Список цветов</a>
+    </div>
+</body>
+</html>

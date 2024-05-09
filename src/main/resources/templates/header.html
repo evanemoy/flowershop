@@ -1,0 +1,7 @@
+<header th:fragment="header" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <a href="/">Главная</a>
+    <a href="/products">Доступные цветы</a>
+    <a href="/orders">Мои заказы</a>
+    <a href="/account">Кошелек</a>
+    <a href="/users/logout" sec:authorize="isAuthenticated()">Выйти</a>
+</header>

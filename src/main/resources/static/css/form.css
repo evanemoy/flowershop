@@ -1,0 +1,52 @@
+.formCustom{
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 40vw;
+    border: 1px solid white;
+    padding: 2vw;
+}
+.formCustom > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 2vw;
+}
+.formCustom > div >label{
+    font-size: 2vw;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 1vw;
+}
+.formCustom > div > input{
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 1vw;
+    outline: none;
+    color: white;
+    font-size: 2vw;
+}
+.formCustom > button{
+    background: transparent;
+    padding: 0.5vw 1.5vw;
+    border: 1px solid white;
+    color: white;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+input[type="file"]{
+    width: auto !important;
+    font-size: 1.5vw !important;
+}
+p.error{
+    color: red;
+    background:white;
+    padding: 0.5vw 1.5vw;
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: 0.5vw;
+}

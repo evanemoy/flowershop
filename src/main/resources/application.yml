@@ -1,0 +1,32 @@
+spring:
+  web:
+    resources:
+        static-locations: file:src/main/resources/static/
+  application:
+    name: flowershop
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: "jdbc:postgresql://dpg-couc9ti1hbls7383i9k0-a:5432/flowershop_db"
+    hikari:
+      username: eva
+      password: jxNqvVqeS8FdPNRGblLU7oqc4hHseoff
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    static-path-pattern: /static/**
+  thymeleaf: # Thymeleaf
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: file:src/main/resources/templates/
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+server:
+  port: ${PORT}

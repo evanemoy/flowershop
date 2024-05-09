@@ -1,0 +1,11 @@
+.adminRoutes{
+    margin-top: 10vw;
+}
+.adminRoutes > a{
+    padding: 0.5vw 1.5vw;
+    border: 1px solid white;
+    color: white;
+    font-size: 2vw;
+    text-decoration: none;
+    text-transform: uppercase;
+}

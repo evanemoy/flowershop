@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/static/css/default.css" rel="stylesheet">
+    <link href="/static/css/adminFlowers.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<a th:href="@{/admin/flowers/create}" class="createFlowerPage">Добавить цветок</a>
+<div th:each="flower : ${flowers}" class="flowers">
+    <div class="flower">
+        <div class="flowerInfo">
+            <p th:text="'Описание:'+${flower.getDescription()}" class="flower_description"></p>
+            <p th:text="'Цена за штуку:'+${flower.getPrice()}" class="flower_price"></p>
+            <p th:text="'Количество:'+${flower.getAmount()}" class="flower_amount"></p>
+            <a th:href="@{/admin/flowers/update-amount/{id}(id=${flower.getFlowerId()})}">Обновить количество</a>
+            <a th:href="@{/admin/flowers/delete/{id}(id=${flower.getFlowerId()})}">Удалить</a>
+        </div>
+        <img th:src="'/photos/'+${flower.getPhotoName()}" class="flower_photo"/>
+
+    </div>
+</div>
+</body>
+</html>

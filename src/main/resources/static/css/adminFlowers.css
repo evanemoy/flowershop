@@ -1,0 +1,70 @@
+h1 {
+    font-size: 3vw;
+    text-transform: uppercase;
+    margin-top: 3vw;
+}
+
+.flowers {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    backdrop-filter: blur(10vw);
+    border-radius: 2vw;
+    padding: 2vw;
+}
+
+.flower{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vw;
+    border: 1px solid white;
+    background: white;
+}
+
+.flowerInfo{
+    color: #a18cd1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    font-size: 2vw;
+}
+
+.flowerInfo > p {
+    margin-top: 1vw;
+}
+
+.flower_description {
+}
+
+.flower_price {
+}
+
+.flower_photo {
+    width: 40vw;
+    margin-left: 3vw;
+}
+
+.flowerInfo> a {
+    margin-top: 3vw;
+    text-decoration: none;
+    padding: 0.5vw 1.5vw;
+    border: 1px solid #a18cd1;
+    color: #a18cd1;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+.createFlowerPage{
+    background: transparent;
+    margin-top: 3vw;
+    text-decoration: none;
+    padding: 0.5vw 1.5vw;
+    border: 1px solid white;
+    color: white;
+    font-size: 2vw;
+    text-transform: uppercase;
+    margin-top: 10vw;
+}

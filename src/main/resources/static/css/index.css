@@ -1,0 +1,31 @@
+.indexContainer{
+    margin-top: 10vw;
+    max-width: 80vw;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+.indexContainer > h1{
+    font-size: 4vw;
+    margin-top: 3vw;
+}
+.indexContainer > p{
+    font-size: 3vw;
+    max-width: 40vw;
+    margin-top: 5vw;
+}
+.indexContainer > .goToLogin{
+    background: transparent;
+    text-decoration: none;
+    padding: 0.5vw 1.5vw;
+    border: 1px solid white;
+    color: white;
+    font-size: 2vw;
+    text-transform: uppercase;
+    margin-top: 3vw;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/css/default.css" rel="stylesheet">
+    <link href="/static/css/orders.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="/header :: header"> </div>
+<h1>Мои заказы</h1>
+<div th:each="order: ${orders}" class="orders">
+    <div class="order">
+        <img th:src="'/photos/'+${order.getFlower().getPhotoName()}" class="photo"/>
+        <div class="orderInfo">
+            <p th:text="'Описание товара: '+${order.getFlower().getDescription()}"></p>
+            <p th:text="'Количество: '+${order.getAmount()}"></p>
+            <p th:text="'Общая стоимость: '+${order.getAmount()*order.getFlower().getPrice()}" class="total"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

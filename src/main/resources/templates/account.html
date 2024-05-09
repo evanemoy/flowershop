@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Счет</title>
+    <link href="/static/css/default.css" rel="stylesheet">
+    <link href="/static/css/account.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<div>
+    <p th:text="'Текущий размер счета:' + ${user.getAccount()}"></p>
+    <a th:href="'/account/top-up/'+${user.getUserId()}">Пополнить счет</a>
+</div>
+</body>
+</html>
