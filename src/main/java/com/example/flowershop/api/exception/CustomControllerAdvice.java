@@ -28,8 +28,8 @@ public class CustomControllerAdvice {
     return "redirect:users/create";
   }
   @ExceptionHandler(IOException.class)
-  public String errorsWithIo(){
-    return "index";
+  public String errorsWithIo(IOException e){
+    return "errors/not_found";
   }
 
 }

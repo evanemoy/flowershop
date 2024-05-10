@@ -32,13 +32,11 @@ public class ProductsFacade {
   }
 
   public void buyProduct(Long flowerId, BuyFlowerDTO dto) throws NotEnoughFlowers {
-    //TODO check if enough money done
-    //TODO decrease amount of flowers done
-    //TODO create order and sign to user
     Flower flower = flowerService.findById(flowerId);
     User user = userService.findUserById(SecurityContextHolderUtils.getUserId());
     checkEnoughMoney(user, flower, dto);
     checkEnoughAmount(flower, dto);
+    user.setAccount(user.getAccount()-dto.getAmount()*flower.getPrice());
     flower.setAmount(flower.getAmount() - dto.getAmount());
     var order = createOrder(dto, user, flower);
     flower.getOrders().add(order);

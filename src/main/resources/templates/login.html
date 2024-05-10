@@ -8,7 +8,7 @@
 </head>
 <body>
 <div th:replace="/header :: header"> </div>
-<form th:action="@{/users/perform-login}"th:method="post" class="formCustom">
+<form th:action="@{/users/perform-login}" th:method="post" class="formCustom">
     <div>
         <label for="username">Имя пользователя:</label>
         <input type="text" id="username" name="username" th:name="username">

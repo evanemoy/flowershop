@@ -66,7 +66,7 @@ public class AdminController {
   @PostMapping("/flowers/create")
   public String createFlower(@RequestParam("image") MultipartFile image,
                              @ModelAttribute("flower") @Valid Flower flower,
-                             BindingResult bindingResult) {
+                             BindingResult bindingResult) throws Exception {
     if (bindingResult.hasErrors()) {
       return "admin/admin_create_flower";
     }
@@ -91,9 +91,5 @@ public class AdminController {
     return "redirect:/admin/flowers";
   }
 
-  @GetMapping("/flowers/delete/{flowerId}")
-  public String deleteFlower(@PathVariable("flowerId") Long flowerId) {
-    adminFacade.deleteFlower(flowerId);
-    return "redirect:/admin/flowers";
-  }
+
 }

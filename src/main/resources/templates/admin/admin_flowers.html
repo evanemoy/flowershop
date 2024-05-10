@@ -16,7 +16,6 @@
             <p th:text="'Цена за штуку:'+${flower.getPrice()}" class="flower_price"></p>
             <p th:text="'Количество:'+${flower.getAmount()}" class="flower_amount"></p>
             <a th:href="@{/admin/flowers/update-amount/{id}(id=${flower.getFlowerId()})}">Обновить количество</a>
-            <a th:href="@{/admin/flowers/delete/{id}(id=${flower.getFlowerId()})}">Удалить</a>
         </div>
         <img th:src="'/photos/'+${flower.getPhotoName()}" class="flower_photo"/>
 

@@ -30,8 +30,5 @@ public class FlowerService {
     return flowerRepository.findById(flowerId).orElseThrow(() -> new NotFoundException("Error getting flower"));
   }
 
-  public void deleteById(Long flowerId) {
-    flowerRepository.deleteById(flowerId);
-  }
 
 }

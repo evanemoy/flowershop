@@ -42,7 +42,7 @@ public class ProductsController {
       model.addAttribute("error", "Не хватает цветов для осуществления заказа");
       return "products/buy";
     }
-    return "redirect:/products/products";
+    return "redirect:/products";
   }
 }
 

@@ -50,8 +50,7 @@ public class AdminFacade {
     model.addAttribute("flower", new Flower());
   }
 
-  @SneakyThrows
-  public void createFlower(Flower flower, MultipartFile file){
+  public void createFlower(Flower flower, MultipartFile file) throws Exception{
     flower.setPhotoName(photoService.savePhoto(file));
     flowerService.saveFlower(flower);
   }
@@ -68,11 +67,4 @@ public class AdminFacade {
     model.addAttribute("updateAmountDTO", new UpdateAmountDTO());
   }
 
-  public void deleteFlower(Long flowerId) {
-    if(flowerService.findById(flowerId)!=null){
-      flowerService.deleteById(flowerId);
-    }else{
-      throw new NotFoundException("No such flower");
-    }
-  }
 }

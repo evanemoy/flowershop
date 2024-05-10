@@ -1,7 +1,7 @@
 spring:
   web:
     resources:
-        static-locations: file:src/main/resources/static/
+      static-locations: file:src/main/resources/static/
   application:
     name: flowershop
   datasource:
